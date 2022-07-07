@@ -1,12 +1,12 @@
 import { Page404Component } from "../authentication/page404/page404.component";
 import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
-import { DashboardComponent } from "./dashboard/dashboard.component";
+import { AlumnoComponent } from "./perfil/perfil.component";
 
 const routes: Routes = [
   {
     path: "dashboard",
-    component: DashboardComponent,
+    component: AlumnoComponent,
   },
   { path: "**", component: Page404Component },
 ];
@@ -15,4 +15,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class ClientRoutingModule {}
+export class AlumnoRoutingModule {}

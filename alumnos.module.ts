@@ -15,14 +15,14 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 import { MatInputModule } from "@angular/material/input";
 import { MatTooltipModule } from "@angular/material/tooltip";
 import { MatRadioModule } from "@angular/material/radio";
-import { ClientRoutingModule } from "./client-routing.module";
-import { DashboardComponent } from "./dashboard/dashboard.component";
+import { AlumnoRoutingModule } from "./alumnos-routing.module";
+import { AlumnoComponent } from "./perfil/perfil.component";
 import { ComponentsModule } from "../shared/components/components.module";
 import { MatTableModule } from "@angular/material/table";
 import { MatTableExporterModule } from "mat-table-exporter";
 
 @NgModule({
-  declarations: [DashboardComponent],
+  declarations: [AlumnoComponent],
   imports: [
     CommonModule,
     chartjsModule,
@@ -32,7 +32,7 @@ import { MatTableExporterModule } from "mat-table-exporter";
     PerfectScrollbarModule,
     MatIconModule,
     MatButtonModule,
-    ClientRoutingModule,
+    AlumnoRoutingModule,
     NgApexchartsModule,
     MatSnackBarModule,
     MatFormFieldModule,
@@ -49,4 +49,4 @@ import { MatTableExporterModule } from "mat-table-exporter";
   ],
   providers: [],
 })
-export class ClientModule {}
+export class AlumnoModule {}

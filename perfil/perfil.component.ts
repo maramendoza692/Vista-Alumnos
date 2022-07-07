@@ -68,10 +68,10 @@ export type radialChartOptions = {
 };
 @Component({
   selector: "app-dashboard",
-  templateUrl: "./dashboard.component.html",
-  styleUrls: ["./dashboard.component.sass"],
+  templateUrl: "./perfil.component.html",
+  styleUrls: ["./perfil.component.sass"],
 })
-export class DashboardComponent implements OnInit {
+export class AlumnoComponent implements OnInit {
   @ViewChild("chart") chart: ChartComponent;
   public areaChartOptions: Partial<areaChartOptions>;
   public radialChartOptions: Partial<radialChartOptions>;
