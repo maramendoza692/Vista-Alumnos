@@ -1,0 +1,87 @@
+<section class="content">
+  <div class="content-block">
+    <div class="block-header">
+      <!-- breadcrumb -->
+      <app-breadcrumb [title]="'Dashboard'" [items]="['Home']" [active_item]="'Dashboard'"></app-breadcrumb>
+    </div>
+    
+    
+    <div class="row clearfix">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+        <div class="card">
+          <div class="header">
+            <h2>Materias</h2>
+          </div>
+          <div class="tableBody">
+            <div class="table-responsive">
+              <mat-table #table matTableExporter [dataSource]="dataArray" matSort class="mat-cell"
+              #exporter="matTableExporter">
+              
+              <!-- ID Column -->
+             
+              <ng-container matColumnDef="clave">
+                <mat-header-cell *matHeaderCellDef mat-sort-header >Clave</mat-header-cell>
+                <mat-cell *matCellDef="let row">{{row.clave.clave}} </mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="nombre">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Materia</mat-header-cell>
+                <mat-cell *matCellDef="let row">{{row.nombre.nombre}}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="profesor">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Profesor</mat-header-cell>
+                <mat-cell *matCellDef="let row">{{row.profesor.nombre}}</mat-cell>
+              </ng-container>
+              <ng-container matColumnDef="calificacion">
+                <mat-header-cell *matHeaderCellDef mat-sort-header>Calificación</mat-header-cell>
+                <mat-cell *matCellDef="let row">{{row.calificacion.calififcacion}}</mat-cell>
+              </ng-container>
+              
+              
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <!-- <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row> -->
+              <mat-row *matRowDef="let row; columns: displayedColumns;" 
+                [style.cursor]="'pointer'" matRipple>
+              </mat-row>
+      </mat-table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <div class="card">
+          <div class="m-b-20">
+            <div class="contact-grid">
+              <div class="profile-header bg-dark">
+                <div class="user-name">DR. John Smith</div>
+                <div class="name-center">Senior Employee</div>
+              </div>
+              <img src="assets/images/user/usrbig3.jpg" class="user-img" alt="">
+              <p>
+                456, Estern evenue, Courtage area,
+                <br />New York
+              </p>
+              <div>
+                <span class="phone">
+                  <i class="material-icons">phone</i>264-625-2583</span>
+              </div>
+              <div class="row">
+                <div class="col-4">
+                  <h5>564</h5>
+                  <small>Following</small>
+                </div>
+                <div class="col-4">
+                  <h5>18k</h5>
+                  <small>Followers</small>
+                </div>
+                <div class="col-4">
+                  <h5>565</h5>
+                  <small>Post</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
